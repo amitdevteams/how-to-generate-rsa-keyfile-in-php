@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $pubkey = $pubkey["key"];
     //download in privatekey.pem file
     file_put_contents('privatekey.pem', $privkey);
+	file_put_contents('publickey.pem', $pubkey);
     // download function start here
     ob_clean();
     header('Content-Description: File Transfer');
